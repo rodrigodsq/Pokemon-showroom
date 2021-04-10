@@ -1,0 +1,20 @@
+<div class="container">
+  <header class="header" >Pokémon Showroom</header>
+  <section class="content" >
+    <div class="sidebar" >
+      <section class="search">
+        <input placeholder="Pesquisar..." type="text" [(ngModel)]="inputPok" (keyup.enter)="searchPokemon()" >
+      </section>
+      <section class="list" >
+        <div class="item" *ngFor=" let nomes of nomesPok" (click)="handleName(nomes)" >{{nomes}}</div>
+      </section>
+    </div>
+    <div class="info" >
+
+      <app-pockinfo [info]="info" [status]="status" ></app-pockinfo>
+
+    </div>
+  </section>
+
+</div>
+

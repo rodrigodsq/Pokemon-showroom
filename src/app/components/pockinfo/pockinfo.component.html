@@ -1,0 +1,27 @@
+<section class="error" *ngIf="!info" >
+  <p>{{status}}</p>
+</section>
+
+<section *ngIf="info" >
+<div class="title" >
+  <img src={{info.sprites.front_default}} alt="">
+  <span>{{info.name}}</span>
+</div>
+
+<div class="specs" >
+  <div>
+    <span>Habilidades:</span>
+    <ul *ngFor="let hab of info.abilities" >
+      <li> {{hab.ability.name}}</li>
+    </ul>
+  </div>
+
+  <div>
+    <span>Tipos:</span>
+    <ul *ngFor="let type of info.types">
+      <li> {{type.type.name}} </li>
+    </ul>
+  </div>
+</div>
+
+</section>
